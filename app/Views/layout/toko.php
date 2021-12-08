@@ -99,7 +99,7 @@
                         <!-- End MAinmenu Ares -->
                         <div class="col-md-2 col-sm-4 col-xs-3">  
                             <ul class="menu-extra">
-                                <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
+                                <li class="search search__open hidden-xs"><span class="ti-quote-left"></span></li>
                                 <li><a href="<?php echo base_url('/user/login');?>"><span class="ti-user"></span></a></li>
                                 
                             </ul>
@@ -111,7 +111,7 @@
             <!-- End Mainmenu Area -->
         </header>
         <!-- End Header Style -->
-        
+
         <!-- Comment -->
         <div class="body__overlay"></div>
         <!-- Start Offset Wrapper -->
@@ -122,11 +122,16 @@
                     <div class="row" >
                         <div class="col-md-12" >
                             <div class="search__inner">
-                                <form action="#" method="get">
+                                <div class="section-title wow fadeInUp" data-wow-delay="0.2s" style="padding: 25px 20px 20px 100px;">
+                                    <!-- <h2>Hi,</h2> --> 
+                                    <h3><?= $greeting ?></h3>
+                                    <!-- <h3>“You can, you should, and if you’re brave enough to start, you will” – Stephen King</h3> -->
+                                </div>
+                                <!-- <form action="#" method="get">
                                     <input placeholder="Search here... " type="text">
                                     <button type="submit"></button>
-                                </form>
-                                <div class="search__close__btn">
+                                </form> -->
+                                <div class="search__close__btn" style="padding: 10px 20px 0px 0px;">
                                     <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
                                 </div>
                             </div>

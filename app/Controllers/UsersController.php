@@ -16,7 +16,18 @@ class UsersController extends BaseController
 
     public function register()
 	{
-		return view('toko/login-register');
+        $cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
+		return view('toko/login-register', $data);
 	}
 
 	public function data_register()
@@ -78,7 +89,18 @@ class UsersController extends BaseController
 
     public function login()
 	{
-		return view('toko/login-register');
+        $cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
+		return view('toko/login-register', $data);
 	}
 
     public function data_login()

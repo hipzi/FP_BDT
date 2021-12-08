@@ -24,11 +24,35 @@ class ShopController extends BaseController
         $this->session = session();
         $data['get_session_id'] = $this->session->get('id');
         $data['produk'] = $this->produk->findAll();
+
+		$cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
         return view('toko/shop', $data);
 	}
     public function cart()
 	{
         $data['cart'] = $this->transaksi->getCart();
+
+        $cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
         return view('toko/cart', $data);
 	}
 
@@ -56,6 +80,18 @@ class ShopController extends BaseController
     public function checkout($items)
 	{
         $data['id_transaksi'] = json_decode($items);
+
+        $cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+        
         return view('toko/checkout', $data);
 	}
 

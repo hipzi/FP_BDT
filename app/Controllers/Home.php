@@ -6,36 +6,119 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('toko/homepage');
+		$cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+		
+		$this->cachePage(180);
+
+		return view('toko/homepage', $data);
 	}
 
 	public function cart()
 	{
-		return view('toko/cart');
+		$cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
+		return view('toko/cart', $data);
 	}
 
 	public function wishlist()
 	{
-		return view('toko/wishlist');
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
+		return view('toko/wishlist', $data);
 	}
 	
 	public function checkout()
 	{
-		return view('toko/checkout');
+		$cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
+		return view('toko/checkout', $data);
 	}
 
 	public function quotes()
 	{
-		return view('toko/quotes');
+		$cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
+		$this->cachePage(180);
+
+		return view('toko/quotes', $data);
 	}
 
 	public function video()
 	{
-		return view('toko/video');
+		$cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
+		$this->cachePage(180);
+
+		return view('toko/video', $data);
 	}
 
 	public function sound()
 	{
-		return view('toko/sound');
+		$cache = \Config\Services::cache();
+
+		if (! $data['greeting'] = $cache->get('greeting')) {
+
+			$data['greeting'] = '“You can, you should, and if you’re brave enough to start, you will” – Stephen King';
+			$cache->save('greeting', $data['greeting'], 300);
+		}
+		else {
+			$data['greeting'] = $cache->get('greeting');
+		}
+
+		$this->cachePage(180);
+
+		return view('toko/sound', $data);
 	}
 }
