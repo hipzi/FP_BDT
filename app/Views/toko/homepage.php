@@ -17,39 +17,12 @@
 
                 <div class="owl-carousel owl-theme">
                     <div class="item item-first">
-                        <!-- <div class="caption">
-                            <div class="container">
-                                    <div class="col-md-8 col-sm-12">
-                                        <h3>Eatery Cafe &amp; Restaurant</h3>
-                                        <h1>Our mission is to provide an unforgettable experience</h1>
-                                        <a href="#team" class="section-btn btn btn-default smoothScroll">Meet our chef</a>
-                                    </div>
-                            </div>
-                        </div> -->
                     </div>
 
                     <div class="item item-second">
-                        <!-- <div class="caption">
-                            <div class="container">
-                                    <div class="col-md-8 col-sm-12">
-                                        <h3>Your Perfect Breakfast</h3>
-                                        <h1>The best dinning quality can be here too!</h1>
-                                        <a href="#menu" class="section-btn btn btn-default smoothScroll">Discover menu</a>
-                                    </div>
-                            </div>
-                        </div> -->
                     </div>
 
                     <div class="item item-third">
-                        <!-- <div class="caption">
-                            <div class="container">
-                                    <div class="col-md-8 col-sm-12">
-                                        <h3>New Restaurant in Town</h3>
-                                        <h1>Enjoy our special menus every Sunday and Friday</h1>
-                                        <a href="#contact" class="section-btn btn btn-default smoothScroll">Reservation</a>
-                                    </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
 
@@ -133,17 +106,12 @@
                                 <img src="images/cfab2b27b7b59bccb9dde5ef4a182413.jpg" class="img-responsive" alt="" style="height:600px;">
                                     <div class="team-hover">
                                             <div class="team-item">
-                                                <h4>Duis vel lacus id magna mattis vehicula</h4> 
                                                 <ul class="social-icon">
                                                     <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                                     <li><a href="#" class="fa fa-envelope-o"></a></li>
                                                 </ul>
                                             </div>
                                     </div>
-                            </div>
-                            <div class="team-info">
-                                <h3>New Catherine</h3>
-                                <p>Kitchen Officer</p>
                             </div>
                         </div>
 
@@ -152,17 +120,12 @@
                                 <img src="images/5b6284822ba4837370e6390fdee8ef44.jpg" class="img-responsive" alt="" style="height:600px;">
                                     <div class="team-hover">
                                             <div class="team-item">
-                                                <h4>Cras suscipit neque quis odio feugiat</h4>
                                                 <ul class="social-icon">
                                                     <li><a href="#" class="fa fa-instagram"></a></li>
                                                     <li><a href="#" class="fa fa-flickr"></a></li>
                                                 </ul>
                                             </div>
                                     </div>
-                            </div>
-                            <div class="team-info">
-                                <h3>Lindsay Perlen</h3>
-                                <p>Owner &amp; Manager</p>
                             </div>
                         </div>
 
@@ -171,17 +134,12 @@
                                 <img src="images/1fcd21c9f67eb16d47be8811e9bf0dc7.jpg" class="img-responsive" alt="" style="height:600px;">
                                     <div class="team-hover">
                                             <div class="team-item">
-                                                <h4>Etiam auctor enim tristique faucibus</h4>
                                                 <ul class="social-icon">
                                                     <li><a href="#" class="fa fa-github"></a></li>
                                                     <li><a href="#" class="fa fa-google"></a></li>
                                                 </ul>
                                             </div>
                                     </div>
-                            </div>
-                            <div class="team-info">
-                                <h3>Isabella Grace</h3>
-                                <p>Pizza Specialist</p>
                             </div>
                         </div>
                         
