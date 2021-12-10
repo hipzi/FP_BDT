@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # install haproxy
-sudo apt-get update -y
-sudo apt install haproxy -y
+apt-get update -y
+apt install haproxy -y
 
 # check haproxy version
 haproxy -v
 
 # remove default config haproxy
-sudo rm -f /etc/haproxy/haproxy.cfg
+rm -f /etc/haproxy/haproxy.cfg
 
-sudo echo '
+echo '
 global
 	daemon
 	maxconn 256
@@ -49,9 +49,9 @@ backend redis-primary
 	tcp-check send info\ replication\r\n
 	tcp-check expect string role:master
 
-	server redis-01 172.31.25.41:6379 maxconn 1024 check inter 1s
-	server redis-02 172.31.29.166:6379 maxconn 1024 check inter 1s
-	server redis-03 172.31.30.219:6379 maxconn 1024 check inter 1s
+	server redis-01 10.0.0.238:6379 maxconn 1024 check inter 1s
+	server redis-02 10.0.0.244:6379 maxconn 1024 check inter 1s
+	server redis-03 10.0.0.246:6379 maxconn 1024 check inter 1s
 
 backend redis-online
 	mode tcp
@@ -61,13 +61,13 @@ backend redis-online
 	tcp-check send PING\r\n
 	tcp-check expect string +PONG
 
-	server redis-01 172.31.25.41:6379 maxconn 1024 check inter 1s
-	server redis-02 172.31.29.166:6379 maxconn 1024 check inter 1s
-	server redis-03 172.31.30.219:6379 maxconn 1024 check inter 1s
+	server redis-01 10.0.0.238:6379 maxconn 1024 check inter 1s
+	server redis-02 10.0.0.244:6379 maxconn 1024 check inter 1s
+	server redis-03 10.0.0.246:6379 maxconn 1024 check inter 1s
 ' > /etc/haproxy/haproxy.cfg
 
 # restart haproxy
-sudo systemctl restart haproxy
+systemctl restart haproxy
 
 
 
