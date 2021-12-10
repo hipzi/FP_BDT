@@ -41,12 +41,3 @@ nginx -t
 
 # restart nginx
 sudo systemctl restart nginx
-
-# setup application
-composer update
-composer install
-composer require predis/predis
-
-# migrate database
-php spark migrate
-php spark db:seed UserSeeder
